@@ -1,0 +1,237 @@
+body {
+  background-color: #0d0d0e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fffdfd;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #ecf0f1;
+  margin: 8px auto;
+  padding: 10px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  border-radius: 50%;
+  margin-top: 15px;
+}
+nav {
+  background-color: #0077b6;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill p {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.progress {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  height: 20px;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: #0077b6;
+  height: 100%;
+  border-radius: 20px;
+}
+.skill p i {
+  margin-right: 10px;
+  color: #0077b6;
+}
+/* Progress bar animation */
+.progress-bar {
+  background-color: #0077b6;
+  height: 100%;
+  border-radius: 20px;
+  width: 0; /* start from 0 for animation */
+  animation: fill 2s forwards; /* 2 seconds animation */
+}
+
+/* Keyframes for filling animation */
+@keyframes fill {
+  from { width: 0; }
+  to { width: var(--fill-width);}
+}
+html {
+  scroll-behavior: smooth;
+}
+nav {
+  background-color: #0077b6;
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;  /* Makes the nav stick */
+  top: 0;            /* Stick to the top */
+  z-index: 1000;     /* Stay above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional shadow */
+}
+/* About Me layout */
+.about-container {
+  display: flex;
+  flex-wrap: wrap; /* For mobile responsiveness */
+  align-items: center;
+  gap: 20px; /* Space between text and photo */
+}
+
+.about-text {
+  flex: 1; /* Takes remaining space */
+}
+
+.about-photo {
+  flex: 0 0 200px; /* Fixed width for photo */
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+/* Photo hover effect */
+.about-photo img {
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo img:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 8px 20px rgb(251, 249, 249); /* Soft shadow */
+}
+/* Footer styles */
+footer {
+  background-color: #111;   /* Matches dark theme */
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+  border-top: 1px solid #333;
+}
+
+footer a {
+  color: #00bfff; /* Link color for visibility */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;           /* Make items horizontal */
+    justify-content: center; /* Center the menu */
+    gap: 30px;               /* Space between items */
+}
+
+nav ul li {
+    display: inline-block;   /* Horizontal layout for older browsers */
+}
+
+nav ul li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.resume-btn {
+  display: inline-block;
+  margin-top: 10px;              /* ensures button is on next line */
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;                /* text color */
+  background-color: #1a1a1a;     /* dark button */
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #4caf50;     /* hover color */
+  z-index: 0;                    /* behind the text */
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover::before {
+  left: 0;
+}
+
+.resume-btn span {
+  position: relative;
+  z-index: 1;                     /* text stays above the animation */
+}
